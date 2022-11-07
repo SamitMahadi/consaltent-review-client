@@ -27,6 +27,7 @@ const Footer = () => {
                 <a className="link link-hover">Terms of use</a>
                 <a className="link link-hover">Privacy policy</a>
                 <a className="link link-hover">Cookie policy</a>
+                
             </div>
         </footer>
     );
