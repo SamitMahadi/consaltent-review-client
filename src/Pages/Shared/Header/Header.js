@@ -40,7 +40,7 @@ const Header = () => {
                  
                                      <img className='rounded-full h-14 w-14' src={user?.photoURL} alt="" />  :
                                      <FaUser></FaUser>                    
-                                    }
+                                }
                 
                 </p>
 
