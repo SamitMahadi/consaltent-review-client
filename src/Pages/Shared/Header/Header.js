@@ -1,3 +1,4 @@
+
 import React, { useContext } from 'react';
 import { FaUser } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
@@ -12,7 +13,13 @@ const Header = () => {
         <Link className='text-black decoration-none text-xl font-semibold px-5' to='/'>Blog</Link>
     </>
 
-    const { user } = useContext(AuthContext)
+    const { user,logOut } = useContext(AuthContext);
+
+    const handleLogOut= ()=>{
+        logOut()
+        .then(()=>{})
+        .catch(error=>console.error(error))
+    }
 
     return (
         <div className="navbar bg-base-100">
@@ -35,11 +42,25 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <h1 className='text-xl mr-4'>{user?.displayName}</h1>
+                <h1 className='text-xl mr-4'>
+                    {
+                        user?.uid?
+                        <>
+                        <button onClick={handleLogOut} className="btn btn-error mr-2">Log out</button>
+                        <span>{user?.displayName}</span>
+                        
+                        </>
+                        :
+                        <>
+                        <Link className='text-black decoration-none text-xl font-semibold px-5' to='/login'>Login</Link>
+                        <Link className='text-black decoration-none text-xl font-semibold px-5' to='/signup'>Signup</Link>
+                        </>
+                    }
+                </h1>
                 <p className="">{user?.photoURL?
                  
                                      <img className='rounded-full h-14 w-14' src={user?.photoURL} alt="" />  :
-                                     <FaUser></FaUser>                    
+                                     <FaUser className='h-10 w-10'></FaUser>                    
                                 }
                 
                 </p>
