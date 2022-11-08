@@ -10,16 +10,16 @@ const Carusel = () => {
         <div className="carousel w-full">
             <div id="slide1" className="carousel-item relative w-full">
                 <img src={img1} className="w-full" />
-                <div className="absolute flex justify-between transform -translate-y-1/2  px-40 top-1/4 md: px-0 ">
-                    <h1 className='text-6xl font-bold text-white md: text-lg px-6'>Transformation Through Consulting</h1>
+                <div className="absolute flex justify-between transform -translate-y-1/2  px-40 top-1/4 ">
+                    <h1 className='text-6xl font-bold text-white '>Transformation Through Consulting</h1>
                 </div>
                 <div className="absolute flex justify-between transform -translate-y-1/2  px-40 top-1/2 text-white">
-                    <p className='md: hidden'>The Process Consultant is no longer consulting. I want to thank my many clients for placing their trust and patience in me over the years. If you are looking for professional business process consulting, I recommend you contact the excellent team at Business Enterprise Mapping who were my serious competition and whose work I always admired.</p>
+                    <p>The Process Consultant is no longer consulting. I want to thank my many clients for placing their trust and patience in me over the years. If you are looking for professional business process consulting, I recommend you contact the excellent team at Business Enterprise Mapping who were my serious competition and whose work I always admired.</p>
 
                 </div>
                 <div className="absolute flex justify-between transform -translate-y-1/2  top-3/4 left-1/2 text-white">
-                    <button class="bg-red-700 hover:bg-red-800 text-white font-bold py-4 px-10 rounded  md: p-0 w-2 h-3 ">
-                        <h1 className='md: text-sm'>Get More</h1>
+                    <button class="bg-red-700 hover:bg-red-800 text-white font-bold py-4 px-10 rounded  ">
+                        <h1>Get More</h1>
                     </button>
                 </div>
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
