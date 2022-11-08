@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../../Assets/logo/logo.png'
+import { AuthContext } from '../../../Contexts/AuthProvider/AuthProvider';
 
 const Header = () => {
 
     const menuItems = <>
-       <Link className='text-black decoration-none text-xl font-semibold px-5' to='/'>Home</Link>
-       <Link className='text-black decoration-none text-xl font-semibold px-5' to='/'>Services</Link>
-       <Link className='text-black decoration-none text-xl font-semibold px-5' to='/'>Blog</Link>
+        <Link className='text-black decoration-none text-xl font-semibold px-5' to='/'>Home</Link>
+        <Link className='text-black decoration-none text-xl font-semibold px-5' to='/'>Services</Link>
+        <Link className='text-black decoration-none text-xl font-semibold px-5' to='/'>Blog</Link>
     </>
+
+    const { user } = useContext(AuthContext)
 
     return (
         <div className="navbar bg-base-100">
@@ -18,11 +21,11 @@ const Header = () => {
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </label>
                     <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-                      {menuItems}
+                        {menuItems}
                     </ul>
                 </div>
                 <Link>
-                <img src={logo} alt="" />
+                    <img src={logo} alt="" />
                 </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
@@ -31,8 +34,11 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end">
+                <h1 className='text-xl mr-4'>{user?.displayName}</h1>
                 <a className="btn">Get started</a>
+
             </div>
+
         </div>
     );
 };
