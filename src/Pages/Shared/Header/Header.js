@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { FaUser } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import logo from '../../../Assets/logo/logo.png'
 import { AuthContext } from '../../../Contexts/AuthProvider/AuthProvider';
@@ -35,7 +36,13 @@ const Header = () => {
             </div>
             <div className="navbar-end">
                 <h1 className='text-xl mr-4'>{user?.displayName}</h1>
-                <a className="btn">Get started</a>
+                <p className="">{user?.photoURL?
+                 
+                                     <img className='rounded-full h-14 w-14' src={user?.photoURL} alt="" />  :
+                                     <FaUser></FaUser>                    
+                                    }
+                
+                </p>
 
             </div>
 
