@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 import ServiceCard from '../Shared/ServiceCard/ServiceCard';
+import AddService from './AddService';
 
 const AllServices = () => {
     const [AllServices, setAllServices] = useState([]);
@@ -23,6 +24,7 @@ const AllServices = () => {
                     ></ServiceCard>)
                 }
             </div>
+            <AddService></AddService>
         </div>
     );
 };

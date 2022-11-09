@@ -29,7 +29,7 @@ const Signup = () => {
         })
     }
     return (
-        <div className='mt-20 mb-20'>
+    <div className='mt-20 mb-20'>
         <div className='form-container w-1/2 h-auto bg-white border-2 border-red-700 rounded-lg	m-auto pl-12 '>
             <h2 className='form-title text-3xl font-normal leading-10 text-center'>Sign Up</h2>
             <form onSubmit={handleSubmit}>
@@ -57,6 +57,7 @@ const Signup = () => {
             <p className='pt-5 mb-5'>Already have an account?<Link className='text-red-700' to='/login'>Login now</Link></p>
         </div>
     </div>
+    
     );
 };
 
