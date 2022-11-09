@@ -10,7 +10,10 @@ const AllServices = () => {
             .then(data => setAllServices(data))
     }, [])
     return (
+        
+
         <div>
+             <p className='text-6xl font-bold text-red-700 mt-5 mb-5 text-center'>Services</p>
             <div className='grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center mb-6'>
                 
                 {
