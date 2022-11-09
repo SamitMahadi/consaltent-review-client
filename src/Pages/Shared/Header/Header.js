@@ -9,7 +9,7 @@ const Header = () => {
 
     const menuItems = <>
         <Link className='text-black decoration-none text-xl font-semibold px-5' to='/'>Home</Link>
-        <Link className='text-black decoration-none text-xl font-semibold px-5' to='/'>Services</Link>
+        <Link className='text-black decoration-none text-xl font-semibold px-5' to='/services'>Services</Link>
         <Link className='text-black decoration-none text-xl font-semibold px-5' to='/'>Blog</Link>
     </>
 

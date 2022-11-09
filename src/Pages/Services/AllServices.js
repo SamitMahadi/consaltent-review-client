@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useLoaderData } from 'react-router-dom';
+
 import ServiceCard from '../Shared/ServiceCard/ServiceCard';
 
 const AllServices = () => {
