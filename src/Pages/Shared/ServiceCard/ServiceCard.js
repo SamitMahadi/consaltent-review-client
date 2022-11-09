@@ -19,7 +19,7 @@ const ServiceCard = ({service}) => {
                   }
                 </p>
                 <div className="card-actions">
-                    <button className="btn btn-error">Error</button>
+                    <button className="btn btn-error">see Details</button>
                 </div>
             </div>
         </div>
