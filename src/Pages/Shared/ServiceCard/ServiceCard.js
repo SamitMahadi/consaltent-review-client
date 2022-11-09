@@ -12,7 +12,7 @@ const ServiceCard = ({ service }) => {
                 <h2 className="card-title">{title}</h2>
                 <p>{
 
-                    discription.length > 50 ?
+                   discription?.length > 50 ?
                         <p>{discription.slice(0, 100) + '...'}</p>
                         :
                         <p>{discription}</p>
