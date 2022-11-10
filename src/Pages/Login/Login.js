@@ -3,12 +3,13 @@ import { Link } from 'react-router-dom';
 import {FaGoogle} from 'react-icons/fa'
 import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 import { GoogleAuthProvider } from 'firebase/auth';
+import useTitle from '../../Hooks/useTitle';
 
 const Login = () => {
     const [error,setError]= useState('')
     const{providerLogin,signIn} =useContext(AuthContext)
 
-    
+    useTitle('login')
 
     const handleSubmit = event=>{
         event.preventDefault();

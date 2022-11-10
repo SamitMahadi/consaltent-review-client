@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState,useEffect } from 'react';
+import useTitle from '../../Hooks/useTitle';
 import ReviewCard from './ReviewCard';
 
 const Review = () => {
@@ -9,6 +10,7 @@ const Review = () => {
             .then(res => res.json())
             .then(data => setAllReviews(data))
     }, [])
+    useTitle('Review')
     return (
         <div>
             {

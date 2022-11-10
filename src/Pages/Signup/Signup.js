@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
+import useTitle from '../../Hooks/useTitle';
 
 const Signup = () => {
     const [error,setError]= useState('')
@@ -28,6 +29,7 @@ const Signup = () => {
             setError(error.message)
         })
     }
+    useTitle('signup')
     return (
     <div className='mt-20 mb-20'>
         <div className='form-container w-1/2 h-auto bg-white border-2 border-red-700 rounded-lg	m-auto pl-12 '>
