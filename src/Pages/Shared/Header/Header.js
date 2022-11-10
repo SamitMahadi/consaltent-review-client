@@ -46,7 +46,7 @@ const Header = () => {
                     {
                         user?.uid?
                         <>
-                        <Link className='text-black decoration-none text-xl font-semibold px-5' to='/review'>Reviews</Link>
+                        <Link className='text-black decoration-none text-xl font-semibold px-5' to='/myReview'>Reviews</Link>
                         <Link className='text-black decoration-none text-xl font-semibold px-5' to='/addServices'>Add serivices</Link>
                         <button onClick={handleLogOut} className="btn btn-error mr-2">Log out</button>
                         <span>{user?.displayName}</span>

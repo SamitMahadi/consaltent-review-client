@@ -2,6 +2,7 @@ import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import AddReview from '../Review/AddReview';
 import Review from '../Review/Review';
+import PrivateRoutes from '../../Router/PrivateRoutes/PrivateRoutes'
 
 const ServiceDetails = () => {
 
