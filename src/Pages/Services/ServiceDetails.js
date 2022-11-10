@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import AddReview from '../Review/AddReview';
+import Review from '../Review/Review';
 
 const ServiceDetails = () => {
 
@@ -23,6 +24,7 @@ const ServiceDetails = () => {
             <p className='text-6xl font-bold text-red-700 mt-5 mb-5 text-center'>Reviews</p>
             <div className='text-center'>
                 <AddReview></AddReview>
+                <Review></Review>
             </div>
         </div>
 
