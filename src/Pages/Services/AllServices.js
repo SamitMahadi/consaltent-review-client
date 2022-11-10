@@ -6,7 +6,7 @@ import ServiceCard from '../Shared/ServiceCard/ServiceCard';
 const AllServices = () => {
     const [AllServices, setAllServices] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://consaltent-review-server.vercel.app/services')
             .then(res => res.json())
             .then(data => setAllServices(data))
     }, [])

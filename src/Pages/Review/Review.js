@@ -6,7 +6,7 @@ import ReviewCard from './ReviewCard';
 const Review = () => {
     const [AllReviews, setAllReviews] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/reviews')
+        fetch('https://consaltent-review-server.vercel.app/reviews')
             .then(res => res.json())
             .then(data => setAllReviews(data))
     }, [])

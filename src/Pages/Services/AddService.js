@@ -8,7 +8,7 @@ const AddService = () => {
         console.log(service);
 
 
-        fetch('http://localhost:5000/services',{
+        fetch('https://consaltent-review-server.vercel.app/services',{
       
         method:'POST',
         headers:{

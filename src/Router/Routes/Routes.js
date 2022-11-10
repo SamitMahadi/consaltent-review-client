@@ -43,12 +43,12 @@ const router =createBrowserRouter([
             {
                 path:'/myReview',
                 element: <MyReview></MyReview>,
-                loader:({params})=>fetch(`http://localhost:5000/reviews/${params.id}`)               
+                loader:({params})=>fetch(`https://consaltent-review-server.vercel.app/reviews/${params.id}`)               
             },
             {
                 path:'/serviceDetails/:id',
                 element: <ServiceDetails></ServiceDetails>,
-                loader:({params})=>fetch(`http://localhost:5000/services/${params.id}`)
+                loader:({params})=>fetch(`https://consaltent-review-server.vercel.app/services/${params.id}`)
                 
             },
             {

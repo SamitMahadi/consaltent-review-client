@@ -7,7 +7,7 @@ const MyReviewCard = ({review}) => {
 
         const proceed = window.confirm('are you delete this review')
         if(proceed){
-            fetch(`http://localhost:5000/reviews/${id}`,{
+            fetch(`https://consaltent-review-server.vercel.app/reviews/${id}`,{
                 method:'DELETE'
             })
             .then(res=>res.json())
