@@ -1,7 +1,21 @@
 import React from 'react';
+import { FaTrash } from 'react-icons/fa';
 
 const MyReviewCard = ({review}) => {
-    const{reviews}=review
+    const{reviews,_id}=review
+    const handleDelete = id =>{
+
+        const proceed = window.confirm('are you delete this review')
+        if(proceed){
+            fetch(`http://localhost:5000/reviews/${id}`,{
+                method:'DELETE'
+            })
+            .then(res=>res.json())
+            .then(data=>{
+                console.log(data);
+            })
+        }
+    }
 
     return (
         <div className="overflow-x-auto">
@@ -10,15 +24,14 @@ const MyReviewCard = ({review}) => {
                 <thead>
                     <tr>
                         <th></th>
-                        <th>Name</th>
-                        <th>Job</th>
-                        <th>Favorite Color</th>
+                        <th>My reviws</th>
+                      
                     </tr>
                 </thead>
                 <tbody>
 
                     <tr>
-                        <th>1</th>
+                        <th><FaTrash onClick={()=>handleDelete(_id)}></FaTrash></th>
                         
                         <td>{reviews}</td>
                         
