@@ -1,5 +1,6 @@
 import React from "react";
 import Main from '../../Layout/Main';
+import Blog from "../../Pages/Blog/Blog";
 import Home from '../../Pages/Home/Home/Home';
 import Login from "../../Pages/Login/Login";
 import AllServices from "../../Pages/Services/AllServices";
@@ -18,6 +19,11 @@ const router =createBrowserRouter([
             {
                 path:'/services',
                 element: <AllServices></AllServices>
+                
+            },
+            {
+                path:'/blogs',
+                element: <Blog></Blog>
                 
             },
             {
