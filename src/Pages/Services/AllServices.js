@@ -24,7 +24,7 @@ const AllServices = () => {
                     ></ServiceCard>)
                 }
             </div>
-            <AddService></AddService>
+            
         </div>
     );
 };
